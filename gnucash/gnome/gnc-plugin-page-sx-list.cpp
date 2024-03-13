@@ -504,7 +504,7 @@ gnc_plugin_page_sx_list_create_widget (GncPluginPage *plugin_page)
         // gint half_way;
         // half_way = plugin_page->notebook_page->allocation.height * 0.5;
         // fixme; get a real value:
-        gtk_paned_set_position (GTK_PANED(priv->widget), 160);
+        gtk_paned_set_position (GTK_PANED(priv->widget), 640);
     }
 
     {
@@ -578,8 +578,8 @@ gnc_plugin_page_sx_list_create_widget (GncPluginPage *plugin_page)
         priv->gdcal = GNC_DENSE_CAL(gnc_dense_cal_new_with_model (window, GNC_DENSE_CAL_MODEL(priv->dense_cal_model)));
         g_object_ref_sink (priv->gdcal);
 
-        gnc_dense_cal_set_months_per_col (priv->gdcal, 4);
-        gnc_dense_cal_set_num_months (priv->gdcal, 12);
+        gnc_dense_cal_set_months_per_col (priv->gdcal, 1);
+        gnc_dense_cal_set_num_months (priv->gdcal, 2);
 
         gtk_container_add (GTK_CONTAINER(swin), GTK_WIDGET(priv->gdcal));
     }
